@@ -59,5 +59,9 @@ PRODUCT_PACKAGES += \
     libshim_mutexdestroy \
     libshim_pthreadts
 
+# Fix WIFI & BT
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,device/xiaomi/land/prebuilt/system,system)
+
 # Inherit proprietary files
 $(call inherit-product-if-exists, vendor/xiaomi/land/land-vendor.mk)
