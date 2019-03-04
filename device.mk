@@ -65,8 +65,8 @@ PRODUCT_PACKAGES += \
     libshim_pthreadts
 
 # Add Color
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/xiaomi/land/prebuilt/system,system/vendor/overlay)
+#PRODUCT_COPY_FILES += \
+#    $(call find-copy-subdir-files,*,device/xiaomi/land/prebuilt/system,system/vendor/overlay)
 
 # Inherit proprietary files
 $(call inherit-product-if-exists, vendor/xiaomi/land/land-vendor.mk)
