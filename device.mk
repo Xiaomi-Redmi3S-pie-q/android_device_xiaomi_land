@@ -47,6 +47,10 @@ PRODUCT_PACKAGES += \
     init.device.rc \
     init.baseband.sh
 
+# Camera app
+PRODUCT_PACKAGES += \
+    MGC
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/ft5x06_720p.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/ft5x06_720p.kl \
@@ -60,9 +64,9 @@ PRODUCT_PACKAGES += \
     libshim_mutexdestroy \
     libshim_pthreadts
 
-# Fix WIFI & BT
-#PRODUCT_COPY_FILES += \
-#    $(call find-copy-subdir-files,*,device/xiaomi/land/prebuilt/system,system)
+# Add Color
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,device/xiaomi/land/prebuilt/system,system/vendor/overlay)
 
 # Inherit proprietary files
 $(call inherit-product-if-exists, vendor/xiaomi/land/land-vendor.mk)
