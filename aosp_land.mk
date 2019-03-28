@@ -25,7 +25,11 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 # Inherit from land device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+# GAPPS
+WITH_GAPPS := true
+TARGET_MINIMAL_APPS := false
 TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
 
 # Boot Animation
 #TARGET_BOOTANIMATION_HALF_RES := true
@@ -36,6 +40,8 @@ PRODUCT_MODEL := Redmi 3S
 PRODUCT_DEVICE := land
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_NAME := aosp_land
+
+#CUSTOM_BUILD_TYPE := OFFICIAL
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
